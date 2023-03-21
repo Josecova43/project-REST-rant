@@ -1,5 +1,5 @@
-require('dotenv').config()
-const express = require('express')
+// require('dotenv').config()
+const express = require('../express')
 const app = express()
 
 
@@ -21,4 +21,11 @@ app.get('*', (req, res) => {
   res.render('error404')
 })
 
-app.listen(process.env.PORT)
+
+//get /places
+app.get('/', (req,res)=> {
+
+  res.render('places/index', {places})
+})
+
+app.listen(3000)

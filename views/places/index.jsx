@@ -1,17 +1,17 @@
 const React = require('react')
 const Def = require('../default')
 
-function index (data) {
-    let placesFormatted = data.places.map((place) => {
+function index ({data}) {
+    let placesFormatted = data.map((places) => {
       return (
         <div className='col-sm-6'>
           <h2>{place.name}</h2>
           <p className='text-center'>
-            {place.cuisines}
+            {places.cuisines}
           </p>
-          <img src={place.pic} alt={place.name}> </img>
+          <img src={places.pic} alt={places.name}> </img>
           <p className='text-center'>
-            located in {place.city},{place.state}
+            located in {places.city},{places.state}
           </p>
         </div>
       )
