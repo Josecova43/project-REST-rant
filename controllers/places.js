@@ -19,6 +19,22 @@ router.post('/', (req, res) => {
 })
 
 
+
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show', {place: places[id]})
+  }
+})
+
+
+
 router.post('/new', (req, res) => {
    res.send('places/new')
 })
