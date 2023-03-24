@@ -20,8 +20,7 @@ router.post('/', (req, res) => {
 
 
 router.post('/new', (req, res) => {
-
-  res.send('POST /places')
+   res.send('places/new')
 })
 
 
