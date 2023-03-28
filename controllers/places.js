@@ -33,6 +33,14 @@ router.delete('/:id', (req, res) => {
     res.redirect('/places')
   }
 })
+router.put('/:id', (req, res) => {
+  db.place_schema.findByIdAndUpdate(String(req.params.id), req.body)
+      .then(() => { res.redirect(`/places/${req.params.id}`) })
+      .catch((err) => {
+          console.log(err)
+          res.render('error404')
+      })
+    })
 
 
 // edit router
