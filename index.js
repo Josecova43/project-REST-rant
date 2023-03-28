@@ -1,7 +1,7 @@
-// require('dotenv').config()
+require('dotenv').config()
 const express=require('express')
 const app = express()
-const methodOverride = require('methodOverride')
+const methodOverride = require('method-override')
 
 
 
@@ -26,11 +26,5 @@ app.get('*', (req, res) => {
   res.render('error404')
 })
 
-
-//get /places
-app.get('/', (req,res)=> {
-
-  res.render('places/index', {places})
-})
 
 app.listen(3000)

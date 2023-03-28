@@ -35,6 +35,16 @@ router.delete('/:id', (req, res) => {
 })
 
 
+// edit router
+router.get('/:id/edit', (req, res) => {
+  db.place_schema.findById(req.params.id)
+      .then((place) => { res.render('places/edit', { place }) })
+      .catch((err) => {
+          console.log(err)
+          res.render('error404')
+      })    
+})
+
 
 
 router.post('/new', (req, res) => {
