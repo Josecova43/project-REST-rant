@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('../default')
+const Default = require('../default')
 
 
 function new_form (data) {
