@@ -6,7 +6,7 @@ function home () {
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
+                <h1>Rest Rant</h1>
                 <div>
                     <img src='public/css/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg' alt=' Image'></img>
                     <div>

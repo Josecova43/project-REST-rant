@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 
 
 //express settings
-app.set('view', __dirname + '/views')
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
@@ -27,4 +27,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000)
+app.listen(process.env.PORT, () => {
+  console.log("Listening on port", process.env.PORT)
+})

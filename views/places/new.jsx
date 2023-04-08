@@ -1,5 +1,6 @@
 const React = require('react')
 const Default = require('../default')
+const Def = require('../default')
 
 
 function new_form (data) {
@@ -12,7 +13,7 @@ function new_form (data) {
     )
   }
     return(
-        <def>
+        <Def>
             <main>
                 <h1> Add a New Place</h1>
                 {message}
@@ -42,7 +43,7 @@ function new_form (data) {
 </form>
 
             </main>
-        </def>
+        </Def>
     )
 }
 

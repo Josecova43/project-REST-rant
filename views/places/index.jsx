@@ -1,5 +1,6 @@
 const React = require('react')
 const Def = require('../default')
+const { DEFAULT_EXTENSIONS } = require('@babel/core')
 
 function Index(data) {
   let placesFormatted = data.places.map((place) => {
@@ -15,14 +16,14 @@ function Index(data) {
   })
 
   return (
-      <Default>
+      <Def>
           <main>
               <h1>Index</h1>
               <div className='row'>
                   {placesFormatted}
               </div>
           </main>
-      </Default>
+    </Def>
   )
 }
 

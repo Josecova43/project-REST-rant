@@ -3,9 +3,14 @@ const Default = require('../default')
 
 function Show(data) {
     let comments = (
-        <h6 className='inactive'>
+        <h3 className='inactive'>
             No comments yet! 😭
-        </h6>
+        </h3>
+    )
+    let rating  = (
+        <h3 className='inactive'>
+            Not yet rated
+        </h3>
     )
     if (data.place.comments.length) {
         comments = data.place.comments.map((c) => {
@@ -21,7 +26,7 @@ function Show(data) {
     }
 
     return (
-        <Default>
+        <Def>
             <main className="px-5 py-4">
                 <div className="row">
                     <div className="col-sm">
@@ -55,6 +60,7 @@ function Show(data) {
 
                         <div className="row">
                             <h3>Ratings</h3>
+                            {rating}
                         </div>
 
                         <div className="row">
@@ -72,7 +78,7 @@ function Show(data) {
                     </div>
                 </div>
             </main>
-        </Default>
+        </Def>
     )
 }
 
